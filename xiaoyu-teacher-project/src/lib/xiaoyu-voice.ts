@@ -9,7 +9,7 @@ export async function speakWithXiaoyu(text: string, onState?: (state: VoiceState
   const channel = pc.createDataChannel("xiaoyu-events");
   const audio = new Audio();
   audio.autoplay = true;
-  audio.playsInline = true;
+ 
   let finished = false;
   let resolveDone: (() => void) | undefined;
   let rejectDone: ((reason?: unknown) => void) | undefined;
